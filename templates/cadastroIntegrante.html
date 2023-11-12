@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Familia</title>
+</head>
+<body>
+    <form action="/cadastroFamilia" method="POST">
+
+        <label for="nomeintegrante">Nome do integrante</label>
+        <input type="text" id="nomeintegrante" name="nomeintegrante">
+        <label for="dataNascimentoIntegrante">DataNascimento do Integrante</label>
+        <input type="date" id="dataNascimentoIntegrante" name="dataNascimentoIntegrante">
+        <label for="parentescoIntegrante">Parentesco</label>
+        <input type="text" id="parentescoIntegrante" name="parentescoIntegrante">
+<!--        <label for="fotoPerfilIntegrante">fotoPerfil</label>-->
+<!--        <input type="image" id="fotoPerfilIntegrante" name="fotoPerfilIntegrante">-->
+        <button type="submit">Adicionar</button>
+    </form>
+    <button id="botaoConcluir" type="submit">Concluir</button>
+</body>
+<script>
+    botaoConcluir = document.querySelector('#botaoConcluir')
+    botaoConcluir.addEventListener('click',() =>
+        {
+            window.location.href = '/dashboard'
+        })
+</script>
+</html>
