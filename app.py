@@ -12,8 +12,8 @@ def cadastroPost():
     dataNascimento = request.form['dataNascimento']
     parentesco = request.form['parentesco']
     #fotoPerfil = request.form['fotoPerfil'] #fotoPerfil
-    familia = cadastroController.cadastrarUsuario(nome, dataNascimento, parentesco)
-    return render_template('cadastroIntegrante.html'), familia
+    cadastroController.cadastrarUsuario(nome, dataNascimento, parentesco)
+    return render_template('cadastroIntegrante.html')
 
 @app.route('/cadastroFamilia', methods = ["POST"])
 def cadastroFamilia():
@@ -21,8 +21,7 @@ def cadastroFamilia():
     dataNascimentoIntegrante = request.form['dataNascimentoIntegrante']
     parentescoIntegrante = request.form['parentescoIntegrante']
     #fotoPerfilIntegrante = request.form['fotoPerfilIntegrante'] #fotoPerfilIntegrante
-    cadastroController.cadastrarIntegrante(nomeintegrante,dataNascimentoIntegrante,
-                                           parentescoIntegrante)
+    cadastroController.cadastrarIntegrante(nomeintegrante,dataNascimentoIntegrante,parentescoIntegrante)
     return render_template('cadastroIntegrante.html')
 
 @app.route('/dashboard', methods = ['GET'])

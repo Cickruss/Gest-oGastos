@@ -1,7 +1,7 @@
-from Models.Familia import Familia
-class Integrante(Familia) :
-    def __int__(self, nome, parentesco, dataNascimento):
+class Integrante:
+    def __init__(self, nome, dataNascimento, parentesco,  administrador):
         self.nome = nome
-        self.parentesco = parentesco
         self.dataNascimento = dataNascimento
+        self.parentesco = parentesco
+        self.administrador = administrador
         #self.fotoPerfil = fotoPerfil #fotoPerfil
